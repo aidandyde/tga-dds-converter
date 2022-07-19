@@ -11,7 +11,7 @@ magickArgs = "dds:mipmaps=1 -define dds:compression=dxt5"
 keepOriginalFiles = False
 
 #"GENERIC" or "TRANSPORT_FEVER_2" - I've made some specific refinements for tpf, but if you just want to use it as a general TGA>DDS converter you can
-processMode = "TRANSPORT_FEVER_2"
+processMode = "GENERIC"
 
 #That's all, stop editing! Happy converting...
 
