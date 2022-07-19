@@ -23,16 +23,16 @@ You will then be presented with a prompt to enter the path to the folder which s
 Consider a folder `myFolder` laid out as follows:
 
 myFolder \
---myOtherFolder \
-----myfileInsideOtherFolder.tga \
---myfile.tga
+|-myOtherFolder \
+| |-myfileInsideOtherFolder.tga \
+|-myfile.tga
 
 If you enter the path to `myfolder` into the script, `myFolder` will now be:
 
 myFolder \
---myOtherFolder \
-----myfileInsideOtherFolder.dds \
---myfile.dds 
+|-myOtherFolder \
+| |-myfileInsideOtherFolder.dds \
+|-myfile.dds 
 
 ## Info for TpF2 Modders
 In TRANSPORT_FEVER_2 mode, this script doesn't touch any of the ui icon files as they don't support DDS, as far as I am aware.
