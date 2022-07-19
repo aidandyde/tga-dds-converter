@@ -22,13 +22,9 @@ promptStr = "Please enter the base folder for the conversion, WITHOUT a trailing
 if processMode == "TRANSPORT_FEVER_2":
     promptStr = "please paste the filepath to the res folder of your mod WITHOUT a trailing slash. (e.g. D:\\tpf_mods\\ivatt4\\ps_ivatt_4mt_1\\res) :"
 baseFolder = input(promptStr)
-#print(baseFolder)
 
 for root, dirNames, fileNames in os.walk(baseFolder):
-    #print(root)
-    #print(fileNames)
-    for fileName in fileNames:
-        
+    for fileName in fileNames:        
         filePath = os.path.join(root, fileName)
         fileExtension = os.path.splitext(filePath)[1] #we don't care about the first output
         if fileExtension == ".tga":
@@ -36,7 +32,6 @@ for root, dirNames, fileNames in os.walk(baseFolder):
             if processMode == "TRANSPORT_FEVER_2" and ("@" in fileName):
                 continue
             cmd = "magick mogrify -format dds -define  " + magickArgs + " " + filePath
-            print(cmd)
             print("converting "+fileName)
             check_output(cmd, shell=True) #this runs the command
             #remove the old .tga file
